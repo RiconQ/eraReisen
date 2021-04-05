@@ -1066,6 +1066,7 @@ IF LOCAL
 			PRINTFORML 「어, 어땠냐고요…?」
 			PRINTFORML 레이센은 돌연 감상을 물어보는 당신을 보며 흠칫거렸다.
 			PRINTFORMW 「마, 맛있었습니다……」
+	ENDIF
 ENDIF
 RETURN 1
 ;==================================================
@@ -1513,7 +1514,9 @@ IF LOCAL
 		ELSE
 			PRINTFORML 
 			PRINTFORML 「그, 꼭 가야하나요……?」
-			PRINTFORML %마스터가% 고개숙여 다시금 부탁하자, 레이센은 거부하는 낌새를 조금 줄이며 
+			PRINTFORML %마스터가% 고개숙여 다시금 부탁하자, 레이센은 거부하는 낌새를 조금 줄이며 고개를 끄덕였다.
+			PRINTFORML 「그… 대신, 가까이 오지는 말아주세요…」
+			PRINTFORMW 레이센은 자신의 팔을 감싸며 당신으로부터 멀찍이 떨어졌다.
 		ENDIF
 RETURN 1
 	;TARGET 이외 데리고 나가(TARGET 동행중만
@@ -1538,48 +1541,74 @@ LOCAL = 1
 ;-------------------------------------------------
 IF LOCAL
 		PRINTFORML 
-		PRINTFORML 「저기, 이야기라면……?」
-		PRINTFORML 레이센의 목소리는 조금 불안한 듯 떨렸다. 눈도 마주치려 하지 않는다.
-		PRINTFORML 레이센은 불안한 듯, 자신의 장발을 손가락으로 꼬고, 옷감같은 귀는 조금 구겨져 있다.
-		PRINTFORML 레이센은 %CALLNAME:MASTER% 이상으로 걱정하고 있었다.
-		PRINTFORML 
-		PRINTFORMW 계속 이런 관계라도 좋은데, 그것이, 바뀌어 버리는 것이 무섭다.
-		PRINTFORML 그렇게 겁장이인 감정이 레이센으로부터, 읽어낼 수 있었다…….
-		PRINTFORML 아니, 다르다. 그녀는 %마스터를% 비추는 거울과도 같다.
-		PRINTFORML 그녀가 불안해보이는 것처럼 느끼는 것은, %CALLNAME:MASTER%도 똑같이 불안하기 때문이다.
-		PRINTFORML 자신의 기분을 솔직하게 말하지 못하는, 겁쟁이인 것은 레이센도 %CALLNAME:MASTER%도 똑같다.
-		PRINTFORMW 그렇기 때문에, 이젠,
+		PRINTFORMW 먼 옛날, 이제까지 그 누구도 발을 디디지 않았던 달에, 불청객이 찾아왔다.
+		PRINTFORMW 그 불청객은, 달에 살고있던 사람들, 달의 주민들을 몰아내고, 자신의 땅인것마냥 날뛰었다.
+		PRINTFORMW 당하고만 있을수 없는 달의 주민들은, 불청객에 대항하여 싸웠지만, 만만치 않았다.
+		PRINTFORMW 그 전장의 한 구석, 한 달토끼가 있다.
+		PRINTFORMW 포로로 잡혀있던 달토끼는, 불청객, 천하디 천한 인간으로부터의 온갖 핍박과 수치를 당하며, 온갖 추악한 욕망을 받아냈다.
+		PRINTFORMW 그리고 잡혀있던 달토끼는, 전장으로부터, 달로부터 도망쳤다.
+		PRINTL 
+		PRINTFORMW 그녀는 부모를, 친구를, 동료를, 고향을 등지고 꼴사납게 도망쳤다.
+		PRINTFORMW 달에서 도망친 그녀는 더이상 달로 돌아가지 못한다. 
+		PRINTFORMW 매일같이 그 끔찍한 나날의 악몽에 시달리며, 그녀는 공주를 만나고, 약사를 만나고, 토끼를 만난다.
+		PRINTFORMW 우울한 과거를 가진 내 앞의 그녀가, 레이센 우동게인 이나바.
+		PRINTL
+		PRINTFORMW 그녀가 보기에는 나는 과거 천하디 천한 인간과 동급으로 보일까.
+		PRINTFORMW 물론 처음 봤을때는, 나를 거부하고, 무서워하며, 한없이 꺼릴뿥인 토끼였다.
+		PRINTFORMW 몇번이고 나를 내치고, 주저앉아 두려워 하던 그녀.
+		PRINTFORMW 나는 그런 그녀에게 몇번이고 다가가고, 몇번이고 물러났다.
+		PRINTFORMW 시간은 흘러, 그녀는 나에게서 멀어졌다.
+		PRINTL
+		PRINTFORMW 그는 다른 사람들과 똑같았다.
+		PRINTFORMW 다른 사람들과 똑같이 다를 희롱하고, 추행할 생각으로 가득한 남자.
+		PRINTFORMW 적어도 처음에는 그렇게 '생각'했다.
+		PRINTFORMW 그는 몇번이나 나를 찾아와서, 나에게 말을 걸었고, 차를 타주고, 일을 도와주었다.
+		PRINTFORMW 그는 무슨 생각일까. 다른 예쁜 사람이라면 이 환상향에 널리고 널렸을텐데.
+		PRINTL
+		PRINTFORMW 어느 순간, 나는 그가 무섭지 않았다. 익숙해진걸까.
+		PRINTFORMW 아니, 익숙해진게 아니다. 나는 약을 팔때도, 약을 제조할때도, 평소에도 그의 생각을 멈출수가 없다.
+		PRINTFORMW 나는 그를, %마스터를% 좋아한다. 
+		PRINTL
+		PRINTFORMW 하지만 그래도 될까? 불현듯 불안감이 엄습해온다. 나는 순결하지도, 정상적이지도 않아.
+		PRINTFORMW 애초에 그는 인간, 나는 달토끼, 원수지간이라 해도 과언이 아니잖아.
+		PRINTFORMW 그리고 그는 여러 사람들을 만나잖아. 나같은건 발끝에도 못미치는 미인들이 줄을 서겠지.
+		PRINTFORMW 나는 멀어지면 되는거야, 순결하지도 않고, 동료를 버리고 도망친 달토끼는 그에게 어울리지 않아.
+		PRINTL
+		PRINTFORMW 자기혐오로 찌들대로 찌든 그녀의 손을 잡고, 외출을 나섰다.
+		PRINTFORMW 필사적으로 거부하던 그녀를 이끌고, 데이트를 즐겼다.
+		PRINTFORMW 시간은 흐르고 하늘은 붉게 물들어, 땅거미가 지고있는 시간에, 그녀를 마주보았다.
+		PRINTFORMW 이제는 그녀의 짐을 덜어주고싶다. 어떤 괴로운 과거가 그녀를 괴롭혀도 그녀를 지탱해주고싶다.
+		PRINTFORMW %마스터는% 레이센을 바라보며, 입을 열었다.
 	IF TFLAG:193 ;고백성공
 		PRINTFORML 
-		PRINTFORML 끝내지 않으면 안 된다. 이 이상의 관계로, 나아가지 않으면 안 된다.
-		PRINTFORML 용기를 쥐어짜, %마스터는% 레이센에게 고백했다.
-		PRINTFORML 
-		PRINTFORMW ·
-		PRINTFORMW ··
-		PRINTFORMW ···
-		PRINTFORMW 긴 침묵의 뒤, 레이센은 표정을 바꾸지 않은 채 눈물을 흘린다.
-		PRINTFORML 「네, 아……거짓말…?」
-		PRINTFORML 레이센은 비틀거리는 발걸음으로, %CALLNAME:MASTER%에게 다가온다. 마치 갓 태어난, 아기사슴과도 같았다.
-		PRINTFORMW 「나, 같은……앗!」
-		PRINTFORML 발을 헛디뎌 넘어질 뻔한 레이센의 몸을, %마스터가% 붙잡아 준다.
-		PRINTFORML 레이센은 몹시 몸을 떨고 있었다. 이런 상태라면 걷는 것조차도 힘들 것이다.
-		PRINTFORML 그녀는, 자기 나름대로 노력했을 것이다. 사실은 도망치고 싶고, 이 장소로부터 멀어지고 싶어서 견딜 수 없었을 것이다.
-		PRINTFORML 「정말로, 나 같은걸…, 좋아해…?」
-		PRINTFORML 「나…! 인간이 무서워서…, 달에서 도망쳐버린 겁쟁이야…?」
-		PRINTFORMW 「%CALLNAME:MASTER%한테서도, 도망쳐버릴지도 몰라…?」
-		PRINTFORML 절대 그럴 일 없을거야. 라고 말하듯이, %마스터는% 레이센의 몸을 꼭 껴안는다.
-		PRINTFORML 평소대로라면 저항할테지만, 반대로 레이센은 %마스터가% 꼭 껴안아주는 것에 안심했는지,
-		PRINTFORML 조금씩, 몸의 떨림은 멈춰갔다.
-		PRINTFORMW 「헤헤, 이상하지, 인간이 무섭다고 말해놓고…, %마스터를% 사랑한다니……」
-		PRINTFORMW 그녀는 자신의 얼굴을 %CALLNAME:MASTER%의 가슴에 묻고, 작은 소리로,
-		PRINTFORML 
-		PRINTFORMW 「너무 좋아……」
-		PRINTFORMW 라며, 얼굴을 들어 웃는 얼굴을 보여 주었다.
-		PRINTFORMW 
-		PRINTFORMW 
-		PRINTFORML 「나, %마스터를% 절대 배신하지 않을……테니까…, %CALLNAME:MASTER%도, 날 배신하지 말아줘?」
-		PRINTFORML 「그……, 배신하면, 삐질꺼니까?」
-		PRINTFORML 그녀는 밝은 어조와 표정으로 그렇게 말한다. 하지만 눈물이 방울져 떨어지는 붉은 눈은 웃고 있지 않았다
+		PRINTFORML 레이센을 향한, 솔직한 마음
+		PRINTFORML 두어번 심호흡을하고는, %마스터는% 레이센에게 고백했다.
+		PRINTL 
+		PRINTFORMW …
+		PRINTFORMW ……
+		PRINTFORMW ………
+		PRINTL
+		PRINTFORMW 거짓말, 거짓말이야. 그가 날 좋아할리가 없어.
+		PRINTFORMW 레이센은 혼란스러웠다. 그녀는 두려움을 감추지 못하고 그를 올려다 보았다.
+		PRINTFORMW 「……거짓말.」
+		PRINTFORMW 진심이야.
+		PRINTFORMW 「…저, 순결하지도 않고, 동료도 버리고 온 패배자에요.」
+		PRINTFORMW 상관없어. 괜찮아.
+		PRINTFORMW 「저 말고도, 다른 좋은 여자가 있을거에요.」
+		PRINTFORMW 아니, 너밖에 없어. 너였음 좋겠어.
+		PRINTFORMW %마스터의% 말이 끝나자, %마스터를% 올려다보는 레이센의 눈에서, 유리구슬같은 눈물이 흘렀다.
+		PRINTFORMW 「정말…… 저같은 거로 괜찮아요…?」
+		PRINTFORMW 대답대신, %마스터는% 레이센을 끌어안았다.
+		PRINTFORMW 작고 금방이라도 쓰러질것같은 그녀의 몸이 떨린다.
+		PRINTFORMW 당신은, 이 작고 가녀린 몸을, 지켜주겠다 다짐했다.
+		PRINTL
+		PRINTFORMW 몇분이나 지났을까. 점차 그녀의 떨림도 줄어들었다.
+		PRINTFORMW 「저도…, 저도 %마스터를% 좋아해요……」
+		PRINTFORMW %마스터의% 품안에서, 레이센은 작은 소리로, 오직 당신에게만 들릴 정도로 속삭였다.
+		PRINTFORMW 「저…, %마스터를% 배신하지 않을테니까. 무엇이든 할테니까. 당신만을 사랑할테니까.」
+		PRINTFORMW 「그러니까, 저를 버리지말아주세요.」
+		PRINTFORMW 눈물을 멈춘 그녀는, 붉은 눈을 번쩍이며 당신을 올려다보았다.
+		PRINTFORMW 그 눈동자는, 핏빛처럼 붉고, 오직 당신만을 비추는 '광기의' 눈동자였다.
 	ELSE
 		IF TALENT:연모
 			PRINTFORML 
