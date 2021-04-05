@@ -1016,10 +1016,11 @@ IF LOCAL
 		PRINTFORML 「아, 아……몸 속이이… 뜨거워…! %CALLNAME:MASTER%……%CALLNAME:MASTER%%UNICODE(0x2665)%」
 		PRINTFORML 분명 일부러 그런거다. 알면서도, 일부러 마셔 준 것이다. %CALLNAME:MASTER%의 눈에서 눈물이 떨어졌다.
 	ELSEIF GETBIT (CFLAG:1490, 0)
-		PRINTFORML 「이 차, 이상한 거 넣었지!?」
-		PRINTFORML 레이센은 %마스터를% 노려보며 찻잔을 들어 올린다.
-		PRINTFORML 「이런 거, 마실까 보냐―！」
-		PRINTFORMW 레이센은 분노하며, 내용물을 %CALLNAME:MASTER%의 얼굴에 뿌렸다.
+		PRINTFORML 「……………………?」
+		PRINTFORML 레이센은 %마스터와% 찻잔을 번갈아보며 점점 얼굴이 일그러진다.
+		PRINTFORML %마스터가% 레이센에게 어째서 마시지 않느냐고 물어볼려는 찰나, 갑자기 눈앞이 어지러워졌다.
+		PRINTFORML 「저기… 어째서…?」
+		PRINTFORMW 떨리는 목소리가 귀에 어렴풋이 들리며, 정신을 차리고보자 레이센은 멀리서 딴 일을 하고있었다.
 	ELSEIF (GETBIT (CFLAG:1 , 0) || TALENT:사모) && !GETBIT (CFLAG:1490, 1)
 		PRINTFORML 「…후와아…%CALLNAME:MASTER%한테, 굉장한 색의 파장이 나오고 있어…. 이거, 마시면 안될꺼같아……」
 		PRINTFORMW 라며, 소녀는 찻잔을 그대로 %CALLNAME:MASTER%에게 돌려주었다.
@@ -1047,7 +1048,24 @@ RETURN RESULT
 LOCAL = 0
 ;-------------------------------------------------
 IF LOCAL
-
+	IF TALENT:연인
+	ELSEIF TALENT:연모
+	ELSEIF TALENT:사모
+	ELSE
+		SELECTCASE TFLAG:194
+		CASE 9 TO 0
+			PRINTFORML 「……술이요……?」
+			PRINTFORML 「……별로 마시고싶진 않은데………」
+			PRINTFORML 레이센은 당신을 힐끔 보곤 술을 한모금 마신다.
+			PRINTFORML 레이센의 입맛에는 맞지 않는것일까. 그녀는 눈가를 찌뿌렸다.
+			PRINTFORMW 레이센은 당신을 등지고 고개를 들며 마시는척을 했다. 물론 술은 당신이 눈치 못채게 땅에 버려졌다.
+		CASEELSE
+			PRINTFORML 「……술인가요……」
+			PRINTFORML 「그… 감사합니다………」
+			PRINTFORML 레이센은 %마스터의% 눈치를 보며 술을 홀짝 마셨다.
+			PRINTFORML 「어, 어땠냐고요…?」
+			PRINTFORML 레이센은 돌연 감상을 물어보는 당신을 보며 흠칫거렸다.
+			PRINTFORMW 「마, 맛있었습니다……」
 ENDIF
 RETURN 1
 ;==================================================
@@ -1311,7 +1329,7 @@ IF LOCAL
 						PRINTFORMW 「하아……하아……」
 						PRINTFORMW 떨리는 숨, 그녀는 손가락 사이로 %CALLNAME:MASTER%의 얼굴을 힐끗 들여다본다.
 						PRINTFORMW 저항하진 않았다… 무서워서 그만 굳어버린 것일까
-						PRINTFORMW ……그렇다면, 그만두는 게 좋을 것이다. 억지로 여성을 범하는 건, 내 취미가 아니야 
+						PRINTFORMW ……그렇다면, ���만두는 게 좋을 것이다. 억지로 여성을 범하는 건, 내 취미가 아니야 
 						PRINTFORMW %마스터가% 일어서려고 한 그때,
 						PRINTFORMW 「아……가지 마!」
 						PRINTFORMW 레이센은 그렇게 외치고, %CALLNAME:MASTER%의 옷소매를 잡았다
@@ -1494,7 +1512,8 @@ IF LOCAL
 			PRINTFORMW 「같이 가줘? 응, 좋아」
 		ELSE
 			PRINTFORML 
-			PRINTFORMW 「좋아요―, 그래도 이상한 곳엔 데려가지 말아주세요」
+			PRINTFORML 「그, 꼭 가야하나요……?」
+			PRINTFORML %마스터가% 고개숙여 다시금 부탁하자, 레이센은 거부하는 낌새를 조금 줄이며 
 		ENDIF
 RETURN 1
 	;TARGET 이외 데리고 나가(TARGET 동행중만
