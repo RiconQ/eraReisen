@@ -186,41 +186,37 @@ RETURN 1
 LOCAL = 1
 ;-------------
 IF LOCAL && !FLAG:70 && (TALENT:사모 || TALENT:연모)
-	PRINTFORMW 「저기, %CALLNAME:MASTER%……」
-	PRINTFORMW 「지금 눈에 먼지가 들어갔는데, 빠지질 않는거야」
-	PRINTFORMW 「네가 빼 줄래?」
-	PRINTL 
-	PRINTL [0]빼준다 [1]빼주지 않는다
-			INPUT
-		IF !RESULT
-	PRINTFORMW %마스터가% 레이센에게 얼굴을 접근한 순간, 소녀는 눈을 감고 자신의 입술을 %CALLNAME:MASTER%의 입술에 꽉 눌렀다.
+	PRINTFORMW 「저기, %CALLNAME:MASTER%씨……」
+	PRINTFORMW 레이센과 귀로길에 접어들던 도중, %마스터를% 부르는 소리에 %CALLNAME:MASTER%는 뒤돌아 레이센을 보았다.
+	PRINTFORMW 레이센은 %마스터를% 불러놓고 한참을 망설였다. 레이센의 행동에 의구심을 느낀 %마스터가% 그녀에게 다가가자, 레이센은 심호흡을 두어번하더니, 무언가 결심한듯 당신을 바라보며 입을 열었다.
+	PRINTFORMW 「그, 저, 절대로, 움직이시면 안되요..」
+	PRINTFORMW 항상 소극적이고 겁이 많았던 그녀가, 비록 말을 더듬었다 하더라도 진지하게 부탁하자. %마스터는% 알았다며 그자리에서 부동자세를 취했다.
+	PRINTFORMW 저벅저벅. 레이센이 당신의 코앞까지 다가가선, 불안한 눈동자로 당신을 쳐다보다, 이윽고 당신의 두 눈을 그녀의 토끼귀로 가려버렸다.
+	PRINTFORMW 흠칫 당황한 %마스터가% 이게 뭐냐고 물어볼려던 찰나.
+	PRINTFORMW %마스터의% 입술에 레이센의 입술이 포개어졌다.
+	PRINTFORMW 레이센의 급작스런 행위에, %마스터는% 굳어버렸고. 레이센은 금방 입술을 뗐다.
 	PRINTL
-	PRINTFORMW ――츄
-	PRINTFORMW 조금 억지로 해낸 첫키스, 겁쟁이인 그녀는 이렇게 할 수밖에 없었다.
-	PRINTFORMW 이런 비겁하고 시시한 방법으로 밖에 할 수 없었다……라고 스스로를 타이르는 레이센을,
-	PRINTFORMW %마스터는% 상냥하게 꼭 껴안아주고, 키스를 받아 들였다.
-	PRINTW 
-	PRINTFORMW 「…………」
-	PRINTFORMW 「……」
-	PRINTFORMW 「……츄팟」
+	PRINTFORMW 이윽고 레이센이 토끼귀를 치우자, %마스터는% 멍하게 레이센을 쳐다보았다.
+	PRINTFORMW 레이센은 홍당무처럼 붉게 물들인 얼굴을 돌리며, 떨리는 목소리로 말했다.
+	PRINTFORMW 「죄, 죄송해요..! 억지로.. 해버려서..」
+	PRINTFORMW 겁이 많은 소녀는, 그렇게라도 했어야했다. 아니, 이것이 그녀가 지금 표할수 있는 최대의 용기였다.
+	PRINTFORMW 자신을 위해 이렇게나 용기를 내준 그녀가 너무나도 사랑스러워서, 당신은 레이센에게 다시 해도 되냐고 상냥하게 물어보았다.
+	PRINTFORMW 「하, 한번 더요..?」
+	PRINTFORMW 화들짝 놀란 그녀는 얼굴을 붉힌채, %마스터를% 힐끔힐끔 보았다.
+	PRINTFORMW 「그.. %CALLNAME:MASTER%씨가.. 해주시면, 안되나요..?」
+	PRINTFORMW %마스터는% 알았다며, 레이센의 어깨를 살포시 잡고는, 서로의 입술을 덮었다.
+	PRINTFORMW 「――츄..」
+	PRINTFORMW 이순간이 둘에게는 영원과 같은 시간으로 느껴지리라.
+	PRINTFORMW 몇초가 지나고 두 사람의 입술이 떼지자, 두 사람은 어색하게 서로를 쳐다보았다.
+	PRINTFORMW %마스터의% 눈을 피하고, 다시 마주보고, 수차례 반복하던 레이센은 이윽고 조심스레 입을 열었다.
+	PRINTFORMW 「그.. 아.. 그..」
+	PRINTFORMW 하지만 너무 긴장해버린 탓일까. 갈피를 못잡던 레이센은 억지로 말을 토해냈다.
+	PRINTFORMW 「머, 먼저.. 가보겠습니다..!」
+	PRINTFORMW 결국 도망치듯 달려간 레이센, 그녀에게 일련의 행동은 너무나도 무리였던 모양이다.
 	PRINTL
-	PRINTFORMW 「이런 어리광을 받아줘서 고마워, %CALLNAME:MASTER%……」
-			IF TALENT:MASTER:키스미경험
-	PRINTFORMW 「이런 식으로 %CALLNAME:MASTER%의 첫키스, 받아 버려서 미안해」
-			ELSEIF TALENT:키스미경험
-	PRINTFORMW 「첫키스는 소중한 사람과 함께… 라고 정했었으니까……」
-			ENDIF
-	PRINTFORMW 「다시 언젠가, 또 언젠가?」
-		ELSE
-	PRINTFORMW 「……그래」
-	PRINTFORMW 「으응, 괜찮아. 눈이 아파서, 눈물이 멈추지 않는 것뿐이니까」
-	PRINTFORMW 소녀는 눈물이 흐르는 눈을 계속 비빈다 ……
-	PRINTFORMW %CALLNAME:MASTER%의 뒤로부터 흐느껴 우는 것 같은 목소리가 들렸다
-	TCVAR:키스캔슬 = 1
-		ENDIF
-ELSE
-	;키스를 캔슬하고 싶은 경우는 이하를 개방
-	TCVAR:키스캔슬 = 1
+	PRINTFORMW 「겁쟁이.. 겁쟁이..!」
+	PRINTFORMW 도망치는 자신이 너무나도 미운 레이센, 그녀는 자신을 겁쟁이라 책망하며 도망쳤다.
+	PRINTFORMW 그녀의 눈에서는 눈물이 흐르지만, 아까의 일을 생각하자 볼에는 홍조가, 키스를 잊지 못하는 입가에는 미소가 지어졌다.
 ENDIF
 RETURN 1
 
@@ -247,33 +243,26 @@ IF LOCAL && !FLAG:70 && TALENT:연모
 	IF LOCAL:1 && ARG == 0
 		;첫회
 		IF FIRSTTIME(1013)
-	PRINTFORMW 「응, %CALLNAME:MASTER%」
-	PRINTFORMW 「나랑 있는게 즐거워?」
-	PRINTFORMW 「잠깐, 무슨 말하는 거야? 같은 얼굴 하지 말아줘」
-	PRINTFORMW 「이쪽은 진지한데……」
-	PRINTFORMW 「음, 뭐가 진지하냐면, 그건―」 
-	PRINTFORMW 소녀는 잔뜩 붉힌 얼굴을 숨기듯 양손으로 얼굴을 가린다. 그리고 조금 진정한 뒤, 입을 열었다.
+	PRINTFORMW 「저기, %CALLNAME:MASTER%씨..」
+	PRINTFORMW 「저.. 그..」
+	PRINTFORMW 데이트의 귀로길에서, 레이센은 %마스터를% 불러세우고, 무언가 말할려는듯 망설였다.
+	PRINTFORMW 「저, 할말이.. 있는데요..」
+	PRINTFORMW %마스터가% 궁금한 얼굴로 무엇이냐 물어보자. 레이센은 당신을 잠깐 보더니, 입을 열려다 휙 몸을 돌렸다.
+	PRINTFORMW 「자.. 잠시만요.. 조금만, 조금만 기달려주세요..」
+	PRINTFORMW 뒤에서도 볼수 있을정도로 붉어진 그녀의 귀, 그리고 떨리는 그녀의 몸.
+	PRINTFORMW 수십초가 지난 뒤, 그녀는 진정하고, 다신 %마스터를% 바라보았다.
 	PRINTL
-	PRINTFORMW 「저기, 그, %CALLNAME:MASTER%랑 있으면 마음이 놓여」
-	PRINTFORMW 「처음에는 모르는 사람이니까, 무섭다고 생각하고 있었는데」
-	PRINTFORMW 「그렇지만 상냥하게 해 주거나, 신경써 주거나 하는 동안에……%CALLNAME:MASTER%가 너무 신경쓰여버려서」
-	PRINTFORMW 「일을 하고 있을 때도 %CALLNAME:MASTER%의 일만 생각해 실패해 버리고…」
-	PRINTFORMW 「만날 수 없는 날도 %CALLNAME:MASTER%의 일만 생각하게 되어 버려서!」
+	PRINTFORMW 「저, 처음에는 %CALLNAME:MASTER%씨를 믿지 못했어요..」
+	PRINTFORMW 「보나마나 제 몸이 목적인 더러운 남자. 라고 생각했었어요.」
+	PRINTFORMW 「근데, 어째서, 그렇게나 친절한거에요..?」
+	PRINTFORMW 「수십번을 내치고, 무시하고, 겁내던 저에게.. 어째서..?」
+	PRINTFORMW 「저는, 하루종일 당신밖에 생각나지 않는데, 당신 생각을 하면 가슴이 아파오는데..!!」
+	PRINTFORMW 「당신은, %CALLNAME:MASTER%씨는, 뭐 때문에 저한테 친절한거에요..?」
+	PRINTFORMW 높아지는 그녀의 목소리, 처음의 차분함은 온데간데 없고, 오열하는 듯한 애절한 목소리가 %마스터의% 귀에 울려퍼진다.
 	PRINTL
-	PRINTFORMW 심호흡한 뒤, 소녀는 조금 진정한다.
-	PRINTFORMW 「나는 %CALLNAME:MASTER%를 좀 더 알고 싶어, 함께 있고 싶어!」
-	PRINTFORMW 「그러니까, 그 저기, 나는 %CALLNAME:MASTER%를……」
-	PRINTFORMW 그녀는 더이상 말할 용기가 없었다… 그녀를 위해 그녀의 그 다음 말을 받아줘야 할까?
-		;단념하지 못한다
-		ELSE
-	PRINTFORMW 「응 %CALLNAME:MASTER%」
-	PRINTFORMW 레이센은 데이트가 끝나고 돌아가는 %CALLNAME:MASTER%의 소매를 잡는다.
-	PRINTFORMW 
-	PRINTFORMW 「……역시 안 돼?」
-	PRINTFORMW 「그, 조금 전 이야기……」
-	PRINTFORMW 「그걸, 생각하면 생각할수록 괴로워서, 자신에게 거짓말하면 거짓말할수록 괴로워서……」
-	PRINTFORMW 「이런 관계인 채로는 나, 만족할 수 없는거야」
-	PRINTFORMW 「그러니까……」
+	PRINTFORMW 「저는, 이제 당신밖에 없어요. 겁쟁이에, 패배자에, 순결하지도 않지만.. 당신만은 사랑하고싶어요..」
+	PRINTFORMW 「그러니까.. 그러니까..」
+	PRINTFORMW 레이센은 자신의 연심을 드러내고, 그렁그렁 맺힌 눈물을 닦지도 않고 %마스터를% 올려다보았다.
 		ENDIF
 		RETURN 1
 	ENDIF
@@ -284,33 +273,31 @@ IF LOCAL && !FLAG:70 && TALENT:연모
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 1
 		PRINTW
-		PRINTFORMW 「……기쁘다」
-		PRINTFORMW 
-		PRINTFORMW 소녀의 몸은 떨고 있었다
-		PRINTFORMW 무서웠을 것이다, 그런데도 그녀는 자신 나름의 용기를 내어, 고백했다.
-		PRINTFORMW 혼자서는 끝까지 말할 수 없었지만, 그 마음은 전해졌다. 레이센은 기쁨의 눈물을 흘린다.
-		PRINTFORMW 
-		PRINTFORMW 「무서웠어, 거절당할꺼라고 생각했어!」
-		PRINTFORMW 「난, 배신자니까, 인간이 무서워서 달에서 도망친 겁쟁이니까……」
-		PRINTFORMW 「그런 내가 인간인 %CALLNAME:MASTER%를 사랑하다니 이상하다고 생각해!」
-		PRINTFORMW 「그렇지만 좋아! 그런데도 %마스터가% 좋아!」
-		PRINTW 
-		PRINTFORMW %CALLNAME:MASTER%의 도움으로, 레이센은 지금까지 할 수 없었던 말을 겨우 말할 수 있었다.
-		PRINTFORMW 그 후, %CALLNAME:MASTER%에게 달려들어, 입맞춤을 주고 받는다.
-		PRINTFORMW 혀를 넣어 쮸읍, 쮸웁, 음란한 물소리를 내면서 혀를 움직인다.
-		PRINTFORMW 혀가 닿을 때마다, 레이센은 쾌락에 몸을 맡기고 몸을 진동시킨다.
-		PRINTFORMW 두 명은 서로의 몸을 밀착시켜, 호흡을 잊을 정도로 서로의 입속을 탐했다.
-		PRINTFORMW 그리고 입을 떼어 놓자, 두 명의 타액으로 반짝이는 다리가 생겼다.
-		PRINTFORMW 레이센은 무거운 숨을 내쉬면서, 흰 뺨을 연분홍색으로 물들이고 흐리멍텅 한 표정으로 %CALLNAME:MASTER%의 얼굴을 응시한다.
-		PRINTFORMW 
-		PRINTFORMW 「너무 좋아」
-		PRINTFORMW 
-		PRINTFORMW 소녀는 마지막에 또 그렇게 말하고 울면서 웃었다
-		PRINTFORMW 
-		PRINTFORMW 「%마스터는% 절대로 배신하지 않을……테니까, %CALLNAME:MASTER%도 날 배신하지 말아줘?」
-		PRINTFORMW 「그……배신하면, 삐질테니까?」
-		PRINTFORMW 그녀는 밝은 어조와 표정으로 그렇게 말했다. 하지만 눈물이 방울져 떨어지는 붉은 눈은 웃고 있지 않았다
-		
+		PRINTFORMW 당신은 레이센의 눈가를 닦아주며, 그녀를 끌어안았다.
+		PRINTFORMW 그녀의 몸은 떨고 있었다
+		PRINTFORMW 이 순간에도, 그녀는 자신의 말때문에 미움받지 않을까 불안해하고 있었다.
+		PRINTFORMW 당신은, 그녀의 등을 토닥이며, 그녀의 이름을 불렀다.
+		PRINTFORMW 그리곤, 사랑한다 속삭였다.
+		PRINTL
+		PRINTFORMW 당신의 품에 안긴 레이센은, 미동도 안한채 당신의 말을 곱씹었다.
+		PRINTFORMW 「정말.. 이런 저라도, 괜찮아요..?」
+		PRINTFORMW 응, 레이센이 좋아.
+		PRINTFORMW 다시금 당신의 의사를 묻는 레이센과, 한치의 망설임도 없이 대답한 당신.
+		PRINTFORMW 인간에게 더럽혀진 달토끼는, 다시금 인간에게 사랑받는다.
+		PRINTFORMW 레이센은 당신의 품에서 살짝 떨어져, 당신의 입술을 포갰다.
+		PRINTFORMW 첫키스때와는 다른, 부끄럽지만 비겁하지 않은 키스.
+		PRINTFORMW 레이센은 혀를 섞으며, 당신과 타액을 주고받았다.
+		PRINTFORMW 입을 떼자, 은색 실이 둘의 입술 사이에 다리를 이었고, 레이센 얼굴을 붉힌채 당신을 바라봤다.
+		PRINTFORMW 「저, 거절당할거라고 생각했어요.」
+		PRINTFORMW 「겁쟁이에, 패배자에, 순결하지도 않으니까, 틀림없이 거절당할거라 생각했어요..」
+		PRINTFORMW 「하지만.. 이제는, 도망치지 않을게요.」
+		PRINTFORMW 레이센은 당신을 바라보며, 사랑스럽게 미소지었다.
+		PRINTFORMW 「저, 당신만을 생각할테니까.」
+		PRINTFORMW 「저, 당신만을 사랑할테니까.」
+		PRINTFORMW 「저, 당신을 배신하지 않을테니까.」
+		PRINTFORMW 「%CALLNAME:MASTER%씨도, 절 배신하면 안되요?」
+		PRINTFORMW 레이센은 붉은 두 눈에 당신을 담으며 말했다.
+		PRINTFORMW 그 붉은 두 눈은, 당신만을 사랑하는 광기만이 가득차고있었다.
 		EXP:키스경험 ++
 		EXP:MASTER:키스경험 ++
 		EXP:애정경험 += 10
@@ -322,27 +309,33 @@ IF LOCAL && !FLAG:70 && TALENT:연모
 	LOCAL:1 = 1
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 2
-		PRINTFORMW %마스터는% 거절한다.
-		PRINTFORMW 그것을 본 레이센은 멍한 표정으로 얼어버리고 있었다.
-		PRINTFORMW %마스터는% 레이센의 이름을 불러, 몸을 흔들자 겨우 몸을 움직였다.
-		PRINTFORMW 「……아, 에……?　응, 조금, 충격?」
-		PRINTFORMW 「어라,  다를까나……뭔가 고양이같은 느낌?」 
-		PRINTW 
-		PRINTFORMW 그녀의 눈에서 한 방울의 눈물이 흐른다.
-		PRINTFORMW 「어라, 어째서? 어째서 눈물이…」
-		PRINTFORMW －계속되어, 두 방울, 세 방울……이윽고 눈물은 폭포처럼 흐르기 시작했다.
-		PRINTFORMW 「딱히, 이젠 만날 수 없게 된다든가, 그런것도 아니면서…… 각오 하고 있었는데……」
-		PRINTFORMW 
+		PRINTFORMW %마스터는% 레이센의 눈을 피하며 작게 미안하다고 말했다.
+		PRINTFORMW 거절의 말, 미안하다는 한마디였지만 그 한마디는 비수같이 레이센의 마음을 꿰뚫었다.
+		PRINTFORMW 레이센의 동공은 커지고, 한동안 말이 없다가, %마스터가% 레이센의 이름을 부르자. 그녀가 정신을 차린듯 %마스터를% 바라봤다.
+		PRINTFORMW 「...아, 에.. 역시.. 안되겠죠..?」
+		PRINTFORMW 「..그쵸? 순결하지도 않은 배신자같은건..」
+		PRINTFORMW 당신이 무어라 말하려던 찰나, 레이센은 뒤돌았다.
+		PRINTFORMW 「..역시, 방금 일은.. 잊어주세요..」
+		PRINTFORMW 「그, 그래도, 다음에 보실때는 평범하게 대해주셔야해요..?」
+		PRINTFORMW 작위적으로 기운찬 목소리를 내는 그녀는, 그대로 발걸을음 옮겨 코너를 돌아 사라졌다.
+		PRINTL
+		PRINTL
+		PRINTFORMW 알고있었다. 내가 그와 어울리지 않는 것은.
+		PRINTFORMW 예상했었다. 그가 내 고백을 거절할 것을.
+		PRINTFORMW 그럼에도, 그녀의 눈에서는 눈물이 멈출줄 모르고 흘러내렸다.
 		PRINTFORMW 「흐, 흐윽……우아아아아! 아아아아앙, 으아아아아!」
-		PRINTFORMW 레이센은 땅바닥에 주저앉아 울기 시작했다. %마스터는% 그런 그녀를 보며 무엇을 생각했을 것인가
-		PRINTFORMW 그녀에게 따로 위로의 말은 하지 않고, 그녀가 울음을 그칠 때까지 머리를 쓰다듬어 주었다.
-		PRINTW 
-		PRINTFORMW 「흑, 흑, 후우……」
-		PRINTFORMW 「응, 이젠 진정됬으니깐……걱정하게 해서 미안해?」
-		PRINTFORMW 그녀는 %CALLNAME:MASTER%의 얼굴을 쳐다보지 않았다.
-		PRINTFORMW 별로 미움받았기 때문에는 아니다.
-		PRINTFORMW %CALLNAME:MASTER%의 얼굴을 봐 버리면, 또 울어버릴 테니까.
-		
+		PRINTFORMW 아무도 없는 대나무 숲 한가운데에서, 그녀의 오열하는 소리가 울려퍼졌다,
+		PRINTFORMW 아무도 그녀를 위로해주지 않는다. 아무도 그녀를 사랑해주지 않는다.
+		PRINTFORMW 밀려오는 슬픔과 지금까지의 행동에 관한 후회가 레이센을 덮친다.
+		PRINTFORMW 레이센의 울음은 더욱 커져갔으며, 그녀의 마음속 상처 또한 커졌다.
+		PRINTL
+		PRINTFORMW 그로부터 수분후, 나올 눈물조차 없을정도로 슬픔을 토해내고, 레이센은 대나무에 몸을 기댔다.
+		PRINTFORMW 「...%CALLNAME:MASTER%씨..」
+		PRINTFORMW 고백을 거절당했어도, 그녀의 마음속에는 여전히 %마스터가% 자리잡고있었다.
+		PRINTFORMW 「..저는, 아무리해도 당신을 떨쳐낼수 없어요..」
+		PRINTFORMW %마스터의% 이름을 수십번, 수백번, 수천번 되뇌이며, 레이센은 자신의 몸을 감싸안았다.
+		PRINTFORMW 「저는, 당신만을 사랑합니다.」
+		PRINTFORMW 아무도 왕래하지 않는 대나무숲에서, 레이센은 홀로 사랑을 맹세했다. 
 		CFLAG:52:1001 = 1
 		RETURN 1
 	ENDIF
