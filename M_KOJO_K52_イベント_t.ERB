@@ -361,43 +361,63 @@ IF LOCAL
 	LOCAL:1 = 1
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 0
-	;더부살이
-		IF FLAG:더부살이캐릭터 == 52
-			PRINTFORMW 「으응~,  재밌었다!」
-			IF RAND:2
-			PRINTFORMW 「즐거웠어, %CALLNAME:MASTER%%UNICODE(0x2665)%」
-			ELSE
-			PRINTFORMW 「다음에도 같이 데이트 해줘?」
-			ENDIF
+	# ;더부살이
+	# 	IF FLAG:더부살이캐릭터 == 52
+	# 		PRINTFORMW 「으응~,  재밌었다!」
+	# 		IF RAND:2
+	# 		PRINTFORMW 「즐거웠어, %CALLNAME:MASTER%%UNICODE(0x2665)%」
+	# 		ELSE
+	# 		PRINTFORMW 「다음에도 같이 데이트 해줘?」
+	# 		ENDIF
 		;연인
-		ELSEIF TALENT:MASTER:연인 == NO:63 && TALENT:63:연인 == NO:63
-			PRINTFORMW 「으응~, 재밌었다!」
+		IF TALENT:MASTER:연인 == NO:63 && TALENT:63:연인 == NO:63
+			PRINTFORMW 「응..~ 재밌었어요♥」
+			PRINTFORMW 귀로길에 접어들 즈음, 레이센이 당신의 팔을 감싸며 붙었다. 
 			IF RAND:2
-			PRINTFORMW 「%마스터와% 같이 있으면 시간 가는줄 모르겠어」
+				PRINTFORMW 「그래도, 딴 여자를 보면 안된다구요?」
+				PRINTFORMW 점점 압박감이 전해지는 당신의 팔. 레이센이 팔을 옥죄여온다.
+				PRINTFORMW 「2시간 10분 52초전에 한 번, 1시간 7분 4초전에 또 한 번, 그리고 37분 27초전에 한 번.」
+				PRINTFORMW 즐거워하던 레이센의 목소리가 점점 무미건조해져간다.
+				PRINTFORMW 심해지는 압박감. 더이상은 팔이 부러질것같았다.
+				PRINTFORMW 「배신하면, 안되요?」
+				PRINTFORMW 사라지는 팔의 압박감, %마스터가% 레이센을 쳐다보자,
+				PRINTFORMW 그녀는 새빨간 눈을 번뜩이며, 당신을 향해 사랑스러운 미소를 지어보였다.
 			ELSE
-			PRINTFORMW 「이젠 돌아가야 하는건 유감이구나」
+				PRINTFORMW 「저기, 조금만 더 같이 있으면 안되나요?」
+				PRINTFORMW 레이센은 당신과 더 있고싶은지, 당신에게 매달린채 올려다보았다.
+				PRINTFORMW 「%CALLNAME:MASTER%씨, 제가 없으면 금방 한눈파니까..」
+				PRINTFORMW 일순, 레이센의 두 분이 붉게 타올랐고, 당신의 팔을 강하게 감쌌다.
+				PRINTFORMW 「그러니까, 좀 더 같이있죠?」
+				PRINTFORMW 당신은 숨막히는 공포를 느끼고, 레이센과 시간을 좀 더 보낸 후 헤어졌다.
 			ENDIF
-	;	연모
+		;연모
 		ELSEIF TALENT:연모
-			IF RAND:2
-			PRINTFORMW 「하아, 이젠 돌아가야겠다」
-			PRINTFORMW 「……저기, 또 데이트해줘?」
-			ELSE
-			PRINTFORMW 「후우, 수고했어」
-			PRINTFORMW 「조금 지쳤을지도……」
-			ENDIF
+			PRINTFORMW 「저, 그 감사했어요.」
+			PRINTFORMW 「저기.. 혹시..」
+			PRINTFORMW 레이센이 우물쭈물거리며 입을 열었다.
+			PRINTFORMW 「그, 실례가 안된다면.. 다음에도..」
+			PRINTFORMW 당신은 알았다며 레이센을 배웅해주었다.
 		;사모
-			ELSEIF TALENT:사모
+		ELSEIF TALENT:사모
 			IF RAND:2
-			PRINTFORMW 「조금만 더 같이 있고 싶지만, 피로는 눈에 나빠」
-			PRINTFORMW 「또 데려가 줘?」
+				PRINTFORMW 「아, 벌써 끝인가요..?」
+				PRINTFORMW 레이센은 아쉬운듯 쓸쓸한 표정을 지었다
+				PRINTFORMW 당신이 좀 더 있다 갈까 물어보자
+				PRINTFORMW 「으음, 역시, 괜찮아요..」
+				PRINTFORMW 「억지부리면, 민폐니까..」
+				PRINTFORMW 레이센은 작별인사를 하고, 당신과 헤어졌다.
 			ELSE
-			PRINTFORMW 「후우, 놀다 지쳤다―！」
-			PRINTFORMW 「일 이외에는 그다지 밖으로 나올 일이 없기 때문에, 이런 것도 가끔 씩은 좋아」
+				PRINTFORMW 「오늘은, 감사했어요..」
+				PRINTFORMW 레이센은 당신에게 감사인사를 했다.
+				PRINTFORMW 「일만 하다보니까, 나올 기회는 별로 없었으니까..」
 			ENDIF
 		;사모가 아니다
 		ELSE
-			PRINTFORMW 「……그, 또 불러 주시면, 기뻐요」
+			PRINTFORMW 「아, 그.. 감사했습니다..」
+			PRINTFORMW 레이센은 당신의 눈치를 보며 감사인사를 했다.
+			PRINTFORMW 다음에 또 같이 가도 되냐고 묻자,
+			PRINTFORMW 「다.. 다음에요..?」
+			PRINTFORMW 레이센은 싫은 표정을 하며 쉽게 대답하지 못했다.
 		ENDIF
 		PRINTFORML 
 		RETURN 1
@@ -444,8 +464,8 @@ IF LOCAL
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 3
 		IF GETBIT (CFLAG:1490, 0)
-			PRINTFORML 「……이정도로 용서한다고 생각하면 큰 착각이야!」
-			PRINTFORML 말은 그렇게 했지만, 눈가에 비치던 분노가 살짝 풀린 것 같다.
+			PRINTFORML 「...이걸로, 봐줄거라 생각하신거에요..?」
+			PRINTFORML 
 		ELSE
 			PRINTFORML 「절대로, 절대로 용서하지 않을 테니까……!」
 			PRINTFORMW 레이센은 그렇게 말하면서 %CALLNAME:MASTER%로부터 떨어졌다. 그리고, 거의 들릴까 말까 한 소리로,
