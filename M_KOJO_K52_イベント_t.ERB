@@ -590,19 +590,19 @@ IF LOCAL
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 3
 		IF TALENT:연인
-			PRINTFORML 「――아……%CALLNAME:MASTER%」
-			PRINTFORML 「후후, 마침 잘됬다아―」
-			PRINTFORML 레이센은 %CALLNAME:MASTER%의 모습을 발견하자 황홀한 표정을 보인다.
-			PRINTFORML 그리고 타올 모습인 채로 그녀는 팔에 매달린다.
-			PRINTFORML 조금 전까지 더운 물에 몸을 담갔었던, 그녀의 눈과 같이 하얀 몸은 따뜻하다.
-			PRINTFORML 레이센은 무엇인가를 기대하는 것 같이 눈을 치켜 뜨고 %CALLNAME:MASTER%의 얼굴을 바라보며, 고혹적인 미소를 보인다.
+			PRINTFORML 「――아……%CALLNAME:MASTER%씨」
+			PRINTFORML 「후후, 마침, 잘오셨어요」
+			PRINTFORML 타올을 몸에 두른채 레이센은 당신을 보자 미소지었다.
+			PRINTFORML 그리고 아무런 거리낌없이 마스터의 팔을 감싸안았다.
+			PRINTFORML 방금 전까지 더운 물에 몸을 담갔을터인 그녀의 몸은, 무척이나 따듯했다.
+			PRINTFORML 레이센은 무언가 기대하는 것처럼 눈을 붉게 치켜 떠 %마스터의% 얼굴을 바라보며, 매혹적인 미소를 보인다.
 			PRINTFORMW 
 			BASE:MASTER:정력 -= 50
 		ELSE
-			PRINTFORML 「아……」
-			PRINTFORML 레이센은 %CALLNAME:MASTER%의 모습을 보자마자, 등을 벽에 대고 목욕탕 구석으로 간다.
-			PRINTFORML 「저기, 여기 있어도 돼……?」
-			PRINTFORMW 타올 모습의 레이센은 방의 모퉁이에 들어앉았다
+			PRINTFORML 「힉..! %CALLNAME:MASTER%씨..」
+			PRINTFORML 레이센은 %마스터의% 모습을 보자마자, 흠칫 놀라 등을 벽에 대고 목욕탕 구석으로 갔다.
+			PRINTFORML 「저기, 여기 있어도 되나요……?」
+			PRINTFORMW 타올을 꼭 쥐곤, 레이센은 귀퉁이에서 쪼그려앉았다.
 		ENDIF
 		RETURN 1
 	ENDIF
@@ -612,8 +612,8 @@ IF LOCAL
 	LOCAL:1 = 1
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 4
-		PRINTFORML 「꺗! 들어가 있으면 말해!」
-		PRINTFORMW 그렇게 말하고 레이센은 목욕탕의 문을 쿵! 하고 닫았다.
+		PRINTFORML 「..힉! 죄, 죄송합니다..!」
+		PRINTFORMW 레이센은 기겁하며 사죄하곤, 문을 쿵! 닫았다.
 		RETURN 1
 	ENDIF
 	;-------------------------------------------------
@@ -622,10 +622,10 @@ IF LOCAL
 	LOCAL:1 = 1
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 5
-		PRINTFORML 「에!?잠…뭐야…!?」
-		PRINTFORML %CALLNAME:MASTER%의 알몸 모습을 본 순간, 레이센의 머릿속이 새하얗게 된다.
-		PRINTFORML 「저리 나가!」
-		PRINTFORMW 그리고 %CALLNAME:MASTER%의 등을 밀치며, 그를 목욕탕으로부터 내쫓는다. 불합리하다.
+		PRINTFORML 「..꺄, 꺄아아ㅡ!」
+		PRINTFORML %마스터의% 나체를 보자, 레이센의 머리는 새하얘졌다.
+		PRINTFORML 「나.. 나가주세요!!」
+		PRINTFORMW 그리고 %마스터의% 등을 밀치며, %마스터를% 목욕탕으로부터 내쫓는다.
 		RETURN 1
 	ENDIF
 	;그 외
@@ -743,26 +743,27 @@ IF LOCAL
 	IF LOCAL:1 && ARG == 1
 	;더부살이
 			IF FLAG:더부살이캐릭터 == 52
-			PRINTFORML 「이제……졸릴지도」 
-			PRINTFORML 「그럼 %CALLNAME:MASTER%, 먼저 자러 갈게」
-			PRINTFORML 그녀는 그렇게 말하며, 기지개를 켜면서 자신의 오두막으로 돌아갔다.
+			PRINTFORML 「후아ㅡ..」
+			PRINTFORML 레이센은 졸린듯이 하품을 하며, 눈가를 비볐다. 
+			PRINTFORML 「그럼.. %CALLNAME:MASTER%씨.. 내일, 봐요..」
+			PRINTFORML 그녀는 %마스터의% 뺨에 가볍게 입맞춤을 하곤, 작별인사를 했다.
 			PRINTFORMW 
 		ELSEIF TALENT:연인
-			PRINTFORML 「이제, 돌아가지 않으면 스승에게 혼나버려」 
-			PRINTFORML 「……스승님은 상당히 걱정 많은 사람이니까. 또 봐, %CALLNAME:MASTER%!」
-			PRINTFORMW 그렇게 말하며, 레이센은 %CALLNAME:MASTER%의 뺨에 키스를 하고 돌아갔다.
+			PRINTFORML 「..아, 이제, 돌아가지 않으면 안될거같네요..」 
+			PRINTFORML 「……스승님이 걱정이 많으셔서요. 그럼, 내일 또 봐요.」
+			PRINTFORMW 그렇게 말하며, 레이센은 %마스터와% 입맞춤을 나누고 돌아갔다.
 		ELSEIF TALENT:연모
-			PRINTFORML 「아,벌써 이런 시간이 이렇게 됐네! 스승님이 걱정해버린다!」
-			PRINTFORML  그녀는 시간을 확인하자마자, 인사도 않고 서둘러 돌아간다.
-			PRINTFORML  그치만, 곧바로 이쪽으로 돌아와서는,
-			PRINTFORML  「저기, 그, 편히 쉬세요!」
+			PRINTFORML 「아,벌써 시간이.. 저 이만 가봐야할거같아요.」
+			PRINTFORML  그녀는 시간을 확인하자마자, %CALLNAME:MASTER%에게 눈길 한 번 안주고 돌아갔다.
+			PRINTFORML  그러나 곧바로 돌아와서는,
+			PRINTFORML  「그, 저기, 잘자요..!」
 			PRINTFORMW 작별인사 후에, 뛰면서 돌아갔다.
 		ELSEIF TALENT:사모
-			PRINTFORML 「아, 이제 돌아갈 시간이야」
-			PRINTFORML 레이센은 그렇게 말하면(자)%CALLNAME:MASTER%에 손을 흔들어, 돌아갔다.
+			PRINTFORML 「아, 이제 돌아갈 시간이에요.」
+			PRINTFORML 레이센은 %CALLNAME:MASTER%에게 손을 흔들며 인사하곤, 돌아갔다.
 		ELSE
-			PRINTFORML  「아, 벌써 이런 시간. 나 돌아갈게요」
-			PRINTFORMW  레이센은 시간을 확인하자, 곧바로 돌아갔다.
+			PRINTFORML 「아.. 저, 이만 가보겠.. 습니다..」
+			PRINTFORMW 레이센은 시간을 확인하자, 고개를 꾸벅 숙이곤 곧바로 돌아갔다.
 		ENDIF
 		RETURN 1
 	ENDIF
