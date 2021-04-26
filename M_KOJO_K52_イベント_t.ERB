@@ -372,7 +372,7 @@ IF LOCAL
 			PRINTFORMW 이제 데이트가 끝났지만, 레이센은 다음에 가볼 장소를 고민하며 기대에 찬 미소로 당신에게 물었다.
 			ENDIF
 		;연인
-		IF TALENT:MASTER:연인 == NO:63 && TALENT:63:연인 == NO:63
+		ELSEIF TALENT:MASTER:연인 == NO:63 && TALENT:63:연인 == NO:63
 			PRINTFORMW 「응..~ 재밌었어요♥」
 			PRINTFORMW 귀로길에 접어들 즈음, 레이센이 당신의 팔을 감싸며 붙었다. 
 			IF RAND:2
@@ -475,10 +475,8 @@ IF LOCAL
 			PRINTFORML 「……미움받기는 싫은데..」
 			PRINTFORML 라고 중얼거렸다.
 		ENDIF
-		PRINTFORML 
 		RETURN 1
 	ENDIF
-	PRINTFORML 
 ENDIF
 RETURN 1
 
@@ -506,7 +504,7 @@ IF LOCAL
 		IF TALENT:연인
 			PRINTFORML 「아, %CALLNAME:MASTER%씨!」
 			PRINTFORML 레이센은 환하게 웃으며 당신에게 달려들렀다.
-			PRINTFORML「저 보러 오신건가요?」
+			PRINTFORML 「저 보러 오신건가요?」
 			PRINTFORML 당신에게 안기곤 사랑스럽게 당신을 올려다보았다. 그리곤 당신을 보더니 눈빛이 살짝 어두워졌다.
 			PRINTFORML 「..딴 여자 보지말고, 나만 봐줘요」
 			PRINTFORML 당신을 향한 붉은 눈동자가 번뜩인다.
