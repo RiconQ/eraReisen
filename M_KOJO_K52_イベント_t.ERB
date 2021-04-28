@@ -169,6 +169,7 @@ ELSE
 	PRINTFORMW 「그, 저.. 일정이 있어서, 이만..」
 	PRINTFORMW 레이센은 당신의 의도를 파악한것인지, 흠칫 놀라며 입을열었다. 당신이 당황하며 알았다고 하자, 레이센은 도망치듯 당신에게서 멀어졌다.
 ENDIF 
+RESIEN_WARN = 0
 RETURN 1
 
 ;※※※※※※※※※※※※※※※※※※※※※※※※※※
@@ -860,19 +861,26 @@ IF LOCAL
 			SELECTCASE RAND:3
 				CASE 2
 					PRINTFORML 「우응……시러……」
+					PRINTFORML %마스터가% 레이센에게 다가가자, 기척을 느낀건지 레이센은 뒤쳐겼다.
 				CASE 1
-					PRINTFORMW 「우, 으응」
+					PRINTFORML 「우, 으응」
+					PRINTFORML %마스터가% 레이센에게 다가가자, 기척을 느낀건지 레이센은 뒤쳐겼다.
 				CASE 0
-					PRINTFORMW 「아……%CALLNAME:MASTER%씨, 좀 더어…」
+					PRINTFORML 「아……%CALLNAME:MASTER%씨, 좀 더어…」
+					PRINTFORML %마스터가% 레이센에게 다가가자, 기척을 느낀건지 레이센은 뒤쳐겼다.
+					PRINTFORML %CALLNAME:MASTER%인걸 알아차린건지, 금새 표정이 풀어졌다.
 			ENDSELECT
 		ELSEIF TALENT:연모
 			SELECTCASE RAND:3
 				CASE 2
-					PRINTFORMW 「안대, 만지지……응」
+					PRINTFORML 「안대, 만지지……응」
+					PRINTFORML %마스터가% 레이센에게 다가가자, 기척을 느낀건지 레이센은 뒤쳐겼다. 
 				CASE 1
-					PRINTFORMW 「……코……으응」
+					PRINTFORML 「……코……으응」
+					PRINTFORML %마스터가% 레이센에게 다가가자, 기척을 느낀건지 레이센은 뒤쳐겼다.
 				CASE 0
-					PRINTFORMW 「아……아앙」
+					PRINTFORML 「아……아앙」
+					PRINTFORML %마스터가% 레이센에게 다가가자, 기척을 느낀건지 레이센은 뒤쳐겼다.
 			ENDSELECT
 		ENDIF
 		RETURN 1
@@ -884,11 +892,23 @@ IF LOCAL
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 5
 		IF TALENT:연인
-			PRINTFORMW 「이젠 안돼, 체력이…」
+			PRINTFORML 「이젠 안돼, 체력이…」
+			PRINTFORML 체력이 다 떨어진걸까, 레이센은 비틀거리며 인상을 찌뿌렸다
+			PRINTFORML %마스터가% 그런 레이센을 부축해주자, 레이센은 배시시 웃었다.
+			PRINTFORML 「아, 헤헤.. 고마워요...」
+			PRINTFORMW 레이센은 이왕 %CALLNAME:MASTER%에게 부축 받는김에, 아예 당신에게 몸을 맡겼다.
 		ELSEIF TALENT:연모
-			PRINTFORMW 「더이상, 안…움직여…」
+			PRINTFORML 「더이상, 안…움직여…」
+			PRINTFORML 체력이 다 떨어진건지, 레이센이 비틀거렸다.
+			PRINTFORML 그런 레이센을 %마스터가% 부축해주자, 레이센은 화들짝 놀라 떨어지려했다.
+			PRINTFORML 「힉..! 괘, 괜찮아요! 저, 따, 땀날테니까..!」
+			PRINTFORML 하지만 혼자서는 비틀거리잖아. 걱정된다고.
+			PRINTFORML 「그.. 그건.. 읏..」
+			PRINTFORML 할 말이 없어진 레이센은 입을 꾹 담았다가, 이내 다시 입을 열었다.
+			PRINTFORMW 「그.. 감사합니다..」
 		ELSE
-			PRINTFORMW 「지쳤어―……」
+			PRINTFORML 「..후우―……」
+			PRINTFORML 레이센은 지친건지, 한숨을 폭 쉬며 심호흡을 했다.
 		ENDIF
 		RETURN 1
 	ENDIF
@@ -899,17 +919,17 @@ IF LOCAL
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 6
 		IF TALENT:연인
-			PRINTFORMW 「어 %마스터가% 먼저 지친 거야? 드문 일이네」
-			PRINTFORMW 무엇이 드문 것인지는 모르지만, 입을 여는 것조차 고통스러웠다.
-			PRINTFORMW 「농담할 때가 아니네…」
+			PRINTFORMW 「어라, 무슨 일이라도 있었나요? %CALLNAME:MASTER%씨가 먼저 지치시다니..」
+			PRINTFORMW 레이센의 농담에 웃어주고 싶었지만, 입도 뻥긋 못할정도로 체력이 없다...
+			PRINTFORMW 「..어라.. 농담할 때가 아닌가보네요…」
 			PRINTFORMW 그렇게 말하며 레이센은 %마스터를% 짊어졌다.
-			PRINTFORMW 「돌봐줄 테니까. 괜찮아, 무겁지 않아요」
-			PRINTFORMW 레이센은 %마스터를% 짊어진 채로 %CALLNAME:MASTER%의 방으로 돌아간다.
+			PRINTFORMW 「후후, 잔뜩 돌봐줄테니까, 걱정하지마세요❤」
+			PRINTFORMW 레이센은 눈을 붉히며, 낮게 웃었다.
 		ELSEIF TALENT:연모
-			PRINTFORMW 「……꺄!　%CALLNAME:MASTER%!」
+			PRINTFORMW 「……꺄!　%CALLNAME:MASTER%씨!」
 			PRINTFORMW %마스터가% 쓰러지자 레이센은 걱정스러운 듯 %마스터를% 바라본다.
-			PRINTFORMW 「아……괘, 괜찮으니까! 데려다 줄 테니까!」
-			PRINTFORMW 레이센은 %마스터를% 짊어져%CALLNAME:MASTER%의 방까지 달린다.
+			PRINTFORMW 「괘, 괜찮으세요?! 부축해드릴테니까, 정신차리세요..!」
+			PRINTFORMW 레이센은 %마스터를% 짊어져 %마스터의% 방까지 달린다.
 		ENDIF
 		RETURN 1
 	ENDIF
@@ -1064,9 +1084,18 @@ IF LOCAL
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG:1 == 1
 		IF TALENT:연인
-			PRINTFORML 「――흥, 그런 짓 하는구나」
-			PRINTFORML 레이센은 기분 나쁜 미소를 띄며 말했다.
-			PRINTFORML 「왜, %CALLNAME:MASTER%? 딱히 그만하라고 안했으니깐, 계속해도 돼?」
+			PRINTFORMW 「―――아.」
+			PRINTFORMW 레이센이 %마스터와% %CALLNAME:ARG%의 나체를 보자, 굳어버렸다.
+			PRINTFORMW 이내, 레이센의 붉은 눈의 생기는 죽어버렸고, 목소리 또한 무미건조해졌다.
+			PRINTFORMW 「왜, 거기서, 무엇을, 하고있으신지?」
+			PRINTFORMW 레이센은 죽은 눈으로 %마스터를% 바라보며, 일정한 높이의 목소리로 말했다.
+			IF RESIEN_WARN == 0
+				PRINTFORMW 「흐응―.. 왜. 계속 해보시지요? 봐드릴테니까?」
+				PRINTFORMW 레이센의 눈은 죽어있지만, 붉게 빛나 %마스터를% 비췄다.
+				PRINTFORMW 「...이번에는 봐드릴테지만, 부처도 3번까지에요? 애.인.씨?」
+				PRINTFORMW	레이센은 미소지으면 당신을 바라봤다. 하지만, 분명 좋은 의미는 아니다.
+				PRINTFORMW 생명의 위기를 느낀 %마스터는% 몸을 놓았다.
+			ELSEIF RESIEN_WARN == 1
 			PRINTFORMW 레이센은 미소짓고 있었지만, 눈에는 힘이 빠지지 않았었다. 오히려 붉게 빛난다.
 			PRINTFORMW 생명의 위기를 느낀%마스터는% 몸을 놓았다.
 		ELSEIF TALENT:연모
